@@ -1,15 +1,88 @@
+html,
 body {
   margin: 0px;
   font-family: Nunito Sans, Arial;
   box-sizing: border-box;
+  height: 100%;
+}
+.header {
+  background-color: #000000;
 }
 .container {
   position: relative;
-  max-width: 1250px;
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-size: cover;
+}
+.header-content {
+  display: flex;
+  justify-content: space-around;
+  height: 83px;
+  align-items: center;
+}
+.logo {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #e3b873;
+}
+.header-navigation {
+  list-style: none;
+  display: flex;
+}
+main {
+  height: 100%;
+}
+.welcome {
+  position: relative;
+  background: url(./images/image1.jpg) no-repeat center;
+}
+.welcome:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
-.button {
+.welcome .wrap {
+  position: relative;
+  z-index: 2;
+  padding-top: 194px;
+}
+.smallText {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 36px;
+  color: #ffffff;
+  position: relative;
+  margin-top: 95px;
+}
+.wrap {
+  height: 707px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.title {
+  margin: 0px;
+  font-family: Yeseva One, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 53px;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: absolute;
+}
+.Request {
   background: #e3b873;
   box-shadow: 0px 5px 15px rgba(189, 171, 143, 0.2);
   border-radius: 2px;
@@ -18,10 +91,6 @@ body {
   padding: 13px 33px;
   color: #ffffff;
   text-transform: uppercase;
-}
-.button1,
-.button2 {
-  width: 207px;
 }
 .button1 {
   background: transparent;
@@ -35,7 +104,8 @@ body {
   line-height: 15px;
   text-align: center;
   color: #ffffff;
-  padding: 19.09px 0;
+  padding: 19px 0;
+  width: 207px;
 }
 .button2 {
   background: #e3b873;
@@ -49,28 +119,10 @@ body {
   text-align: center;
   color: #ffffff;
   padding: 19px 0;
+  width: 207px;
 }
-.logo {
-  font-family: Nunito Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 11px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #e3b873;
-}
-.header {
-  background-color: #000000;
-}
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  height: 83px;
-  align-items: center;
-}
-.header-navigation {
-  list-style: none;
-  display: flex;
+.projects {
+  background: url(./images/fon2.jpg) no-repeat center;
 }
 .header-navigation_item {
   margin-right: 47px;
@@ -117,13 +169,6 @@ body {
   padding-top: 194px;
   position: relative;
 }
-.projects {
-  background-image: url(./images/fon2.jpg);
-  background-size: cover;
-  height: 1074px;
-  padding-top: 194px;
-  position: relative;
-}
 #slider:after {
   content: "";
   position: absolute;
@@ -134,38 +179,20 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
-.title {
-  margin: 0px;
-  font-family: Yeseva One, "Times New Roman", Times, serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 40px;
-  line-height: 53px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
 .colorText {
   color: #e3b873;
 }
-.smallText {
-  font-family: Nunito Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 36px;
-  color: #ffffff;
-}
-.sector3-image {
+.projects-image {
   position: relative;
   padding-left: 50px;
   height: 482px;
   width: 679px;
 }
-.sector3-container {
+.projects-container {
   display: flex;
   justify-content: center;
 }
-.sector3-bigtext {
+.projects-bigtext {
   font-family: Yeseva One;
   font-style: normal;
   font-weight: normal;
@@ -175,7 +202,7 @@ body {
   text-transform: uppercase;
   color: #e3b873;
 }
-.sector3-smalltext {
+.projects-smalltext {
   font-family: Nunito Sans;
   font-style: normal;
   font-weight: normal;
@@ -183,7 +210,7 @@ body {
   line-height: 27px;
   color: #ffffff;
 }
-.sector3-yellowtext {
+.projects-yellowtext {
   font-family: Yeseva One;
   font-style: normal;
   font-weight: normal;
@@ -192,7 +219,7 @@ body {
   text-transform: uppercase;
   color: #e3b873;
 }
-.sector3-rectangle {
+.projects-rectangle {
   padding-left: 40px;
 }
 .sector4 {
@@ -245,20 +272,44 @@ body {
   display: flex;
   flex-direction: column;
   padding: -90px;
+  position: relative;
+}
+.wrapperImage-center {
+  display: flex;
+  width: 100%;
+  place-content: center;
+  position: absolute;
+  bottom: -217px;
+  z-index: 2;
+}
+.wrapperImage {
+  display: flex;
+  align-items: center;
+  place-content: center;
+  height: 434px;
+  width: 817px;
+  position: relative;
+}
+.wrapperImage:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 9, 9, 0.3);
+  z-index: 1;
+}
+.wrapperImage img {
+  position: absolute;
 }
 .camera {
   padding-top: 95px;
   padding-left: 530px;
 }
 .sector6-image {
-  height: 434px;
-  width: 817px;
-  margin: -190px auto auto auto;
-  z-index: 2;
-}
-.ring {
-  margin: -217px auto auto auto;
-  z-index: 2;
+  width: 100%;
+  height: 100%;
 }
 .Rectangle3 {
   padding-left: 640px;
@@ -272,23 +323,22 @@ body {
   line-height: 37px;
   text-align: center;
   color: #363636;
-  padding-top: 0px;
+  padding-top: 306.5px;
+  left: 380px;
 }
-.sector10 {
+.contInf {
   display: flex;
   flex-direction: row;
+  position: relative;
+  left: 336px;
 }
-.sector8 {
+.contInf-name {
   display: flex;
   flex-direction: column;
-  padding-left: 325px;
-  padding-top: 93px;
 }
-.sector9 {
+.contInf-phone {
   display: flex;
   flex-direction: column;
-  padding-left: 120px;
-  padding-top: 93px;
 }
 .Name {
   font-style: normal;
@@ -328,7 +378,7 @@ body {
   padding-left: 520px;
   padding-top: 37px;
 }
-.agree {
+.contInf-agree {
   font-family: Nunito Sans;
   font-style: normal;
   font-weight: normal;
@@ -350,7 +400,7 @@ body {
   width: 200px;
   height: 50px;
 }
-.sector11MainText {
+.contInf-MainText {
   font-family: Yeseva One;
   font-style: normal;
   font-weight: normal;
@@ -359,16 +409,22 @@ body {
   text-transform: uppercase;
   color: #181818;
   padding-left: 550px;
-  padding-top: 87px;
+  position: relative;
+  top: 147.85px;
 }
 .Hammer {
   padding-left: 580px;
-  padding-top: 13px;
 }
-.sector12 {
+.contInf-Hammer {
+  position: relative;
+  top: 186.85px;
+}
+.footPictures {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  position: relative;
+  top: 245.85px;
 }
 .tFladge {
   font-family: Yeseva One;
@@ -390,19 +446,14 @@ body {
   background: #ffffff;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 }
-.textFooter1 {
-  margin: -90px;
-  padding-left: 130px;
-}
-.textFooter2,
-.textFooter3 {
-  margin: -90px;
-  padding-left: 250px;
-}
-.sector13 {
+.footList {
   display: flex;
-  justify-content: start;
+  justify-content: space-around;
 }
 .left li {
   padding-left: auto;
+}
+.button {
+  display: flex;
+  flex-direction: row;
 }
