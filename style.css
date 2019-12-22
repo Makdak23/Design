@@ -328,9 +328,8 @@ main {
 }
 .contInf {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   position: relative;
-  left: 336px;
 }
 .contInf-name {
   display: flex;
@@ -339,6 +338,7 @@ main {
 .contInf-phone {
   display: flex;
   flex-direction: column;
+  padding-left: 58px;
 }
 .Name {
   font-style: normal;
@@ -400,6 +400,9 @@ main {
   width: 200px;
   height: 50px;
 }
+.placeButton {
+  padding-left: 58px;
+}
 .contInf-MainText {
   font-family: Yeseva One;
   font-style: normal;
@@ -408,7 +411,6 @@ main {
   line-height: 28px;
   text-transform: uppercase;
   color: #181818;
-  padding-left: 550px;
   position: relative;
   top: 147.85px;
 }
@@ -420,22 +422,31 @@ main {
   top: 186.85px;
 }
 .footPictures {
+  margin-top: 250px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+ justify-content: space-around;
+}
+.footList {
   position: relative;
-  top: 245.85px;
+  display: flex;
+  justify-content: space-around;
+}
+.textFooter {
+  display: flex;
+  justify-content: space-between;
 }
 .tFladge {
+  position: absolute;
   font-family: Yeseva One;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
   color: #363636;
-  padding-left: 50px;
+  padding-left: 215px;
 }
 .tFsmall {
+  margin: 33px;
   font-family: Nunito Sans;
   font-style: normal;
   font-weight: normal;
@@ -446,14 +457,34 @@ main {
   background: #ffffff;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 }
-.footList {
-  display: flex;
-  justify-content: space-around;
-}
+
 .left li {
   padding-left: auto;
 }
 .button {
+  position: relative;
   display: flex;
-  flex-direction: row;
+  justify-content: space-around;
+}
+.allFoot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.submit1,
+.submit2,
+.submit3 {
+  background: #e3b873;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+  color: #ffffff;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  margin-right: 135px;
 }
