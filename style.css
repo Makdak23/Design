@@ -279,7 +279,7 @@ main {
   width: 100%;
   place-content: center;
   position: absolute;
-  bottom: -217px;
+  padding-top: -217px;
   z-index: 2;
 }
 .wrapperImage {
