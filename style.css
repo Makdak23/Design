@@ -70,6 +70,7 @@ main {
   height: 707px;
   max-width: 1250px;
   margin: 0 auto;
+  padding-top: 107px;
 }
 .title {
   margin: 0px;
