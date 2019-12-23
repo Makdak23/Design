@@ -1,5 +1,6 @@
 html,
 body {
+  background-size: cover;
   margin: 0px;
   font-family: Nunito Sans, Arial;
   box-sizing: border-box;
@@ -70,7 +71,6 @@ main {
   height: 707px;
   max-width: 1250px;
   margin: 0 auto;
-  padding-top: 107px;
 }
 .title {
   margin: 0px;
